@@ -1,0 +1,34 @@
+@page
+@model WebApplication1.Pages.AuctionSession.IndexModel
+
+<h2>Scheduled Auctions</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Auction ID</th>
+        <th>Jewelry ID</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Status</th>
+        <th>Initial Price</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var auction in Model.AuctionSections)
+    {
+        <tr>
+            <td>@auction.AuctionID</td>
+            <td>@auction.JewelryID</td>
+            <td>@auction.StartTime</td>
+            <td>@auction.EndTime</td>
+            <td>@auction.Status</td>
+            <td>@auction.InitialPrice</td>
+            <td>
+                    <a href="AuctionSession/AuctionSesionDetail?id=@auction.AuctionID" class="form-control btn btn-secondary">Bid</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>    

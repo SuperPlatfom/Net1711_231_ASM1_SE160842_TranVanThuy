@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\JewelryAuctionWebAPI\JewelryAuctionWebAPI.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\Customers\Auction\ApproveAuction.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Customers\Auction\CreateJewelryAndAuction.cshtml" />
+    </ItemGroup>
+
+</Project>
